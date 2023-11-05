@@ -1,12 +1,13 @@
 body {
     overflow: hidden;
+    height: 100vh;
 }
 
 .box {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100dvh;
+    height: 100%;
     flex-wrap: wrap;
     flex-direction: column;
     background-color: white;
@@ -24,6 +25,7 @@ body {
     padding: 20px;
     box-shadow: 0 0 0 99999px rgb(255, 255, 255);
     z-index: 1;
+    background-color: rgba(0, 60, 255, 0.05);
 }
 
 @keyframes rotate {
@@ -46,13 +48,16 @@ body {
 #one {
     background-color: rgba(250, 234, 214, 0.6);
     right: 45%;
+    top: 60%;
 }
 
 #two {
     background-color: rgba(214, 227, 250, 0.6);
     left: 45%;
+    top: 60%;
 }
 
 #three {
     background-color: rgba(214, 245, 250, 0.6);
+    top: 60%;
 }
