@@ -1,0 +1,58 @@
+body {
+    overflow: hidden;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: white;
+}
+
+#weathericon {
+    padding-bottom: 80px;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 0 0 99999px rgb(255, 255, 255);
+    z-index: 1;
+}
+
+@keyframes rotate {
+    50% {
+        transform: rotate(180000deg);
+    }
+}
+
+.wave {
+    height: 350px;
+    width: 250px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    animation: rotate 10000s infinite linear;
+    overflow: hidden;
+    z-index: 0;
+}
+
+#one {
+    background-color: rgba(250, 234, 214, 0.6);
+    right: 45%;
+}
+
+#two {
+    background-color: rgba(214, 227, 250, 0.6);
+    left: 45%;
+}
+
+#three {
+    background-color: rgba(214, 245, 250, 0.6);
+}
