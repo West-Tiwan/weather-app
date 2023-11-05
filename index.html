@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,62 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c62b668f59.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="box">
         <div class="wave" id="one"></div>
         <div class="wave" id="two"></div>
         <div class="wave" id="three"></div>
         <div class="info">
-        <div id="weathericon">
-            <i class="fa-regular fa-sun fa-spin fa-2xl"></i>
-        </div>
+            <div id="weathericon">
+                <i class="fa-regular fa-sun fa-spin fa-2xl"></i>
+            </div>
             <h2 class="location"><i class="fa-solid fa-l fa-location-crosshairs"></i>Delhi, In</h2>
-            <p id="date">WED | OCT 05 | 09:53</p>
+            <p id="date"></p>
             <h1 class="temp">30.69°C</h1>
             <h3 class="tempmin_max">Min 10.42°C | Max 40.69°C</h3>
         </div>
     </div>
+    <script>
+        const currdate = document.getElementById("date");
+        let weathericon = document.getElementById("weathericon");
+        let tempstatus = "clouds";
+        const getCurrentDay = () => {
+            var weekday = new Array(7);
+            weekday[0] = "Sun";
+            weekday[1] = "Mon";
+            weekday[2] = "Tue";
+            weekday[3] = "Wed";
+            weekday[4] = "Thu";
+            weekday[5] = "Fri";
+            weekday[6] = "Sat";
+            let currentTime = new Date();
+            return(`${weekday[currentTime.getDay()]}`);
+        }
+        const getCurrentTime = () => {
+            var months = [
+                "Jan",
+                "Feb",
+                "Mar",
+                "Apr",
+                "May",
+                "June",
+                "July",
+                "Aug",
+                "Sep",
+                "Oct",
+                "Nov",
+                "Dec"
+            ];
+            var n = new Date();
+            var month = n.getMonth();
+            var day = n.getDate();
+            return(`${day} | ${months[month]}`);
+        }
+        getCurrentDay();
+        getCurrentTime();
+        currdate.innerHTML = getCurrentDay() + " | " + getCurrentTime();
+    </script>
 </body>
+
 </html>
